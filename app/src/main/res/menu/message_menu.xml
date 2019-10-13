@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/message_reply_item"
+        android:title="Reply" />
+    <item
+        android:id="@+id/message_copy_item"
+        android:title="Copy Message" />
+    <item
+        android:id="@+id/message_edit_item"
+        android:title="Edit" />
+    <item
+        android:id="@+id/message_delete_item"
+        android:title="Delete" />
+    <item
+        android:id="@+id/message_delete_for_everyone_item"
+        android:title="Delete for Everyone" />
+</menu>

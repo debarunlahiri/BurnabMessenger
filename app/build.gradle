@@ -1,0 +1,173 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.debarunlahiri.burnab.messenger"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 17
+        versionName "1.5.2"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        renderscriptTargetApi 29 //must match target sdk and build tools
+        renderscriptSupportModeEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main { java.srcDirs = ['src/main/java', 'src/main/java/2', 'src/main/java/Group'] }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.core:core:1.2.0-alpha01'
+    testImplementation 'junit:junit:4.13-beta-3'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'com.google.android.material:material:1.1.0-alpha07'
+    implementation 'com.google.firebase:firebase-database:17.0.0'
+    implementation 'com.google.firebase:firebase-auth:17.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.google.firebase:firebase-storage:17.0.0'
+    implementation 'com.google.firebase:firebase-auth:17.0.0'
+    implementation 'com.jsibbold:zoomage:1.2.0'
+    implementation 'com.jakewharton.rxbinding3:rxbinding:3.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-alpha06'
+    implementation 'id.zelory:compressor:2.1.0'
+    implementation 'com.github.curioustechizen.android-ago:library:1.4.0'
+    implementation 'com.github.denzcoskun:ImageSlideshow:0.0.2'
+    implementation 'com.github.shts:StoriesProgressView:3.0.0'
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'com.google.firebase:firebase-core:16.0.9'
+    implementation 'com.google.firebase:firebase-messaging:18.0.0'
+    implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
+    implementation 'com.google.firebase:firebase-perf:17.0.2'
+    implementation 'com.klinkerapps:drag-dismiss-activity:1.7.0'
+    implementation 'com.borjabravo:readmoretextview:2.1.0'
+    api 'com.theartofdev.edmodo:android-image-cropper:+'
+    implementation 'com.android.support:palette-v7:28.0.0'
+    implementation 'io.alterac.blurkit:blurkit:1.1.0'
+    implementation 'com.google.firebase:firebase-dynamic-links:17.0.0'
+    implementation 'io.github.ponnamkarthik:richlinkpreview:1.0.9'
+
+    //Firebase-UI Library
+    implementation 'com.firebaseui:firebase-ui-database:4.3.1'
+
+    //Android Paging Libray
+    implementation "android.arch.paging:runtime:1.0.1"
+
+    //Firebase Pagination Library
+    implementation 'com.shreyaspatil:FirebaseRecyclerPagination:1.0.1'
+
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.10.2'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.10.2'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.10.2'
+
+    //Random Word Generator
+    implementation 'com.maximeroussy.invitrode:invitrode:2.0.1'
+
+    implementation 'io.alterac.blurkit:blurkit:1.1.0'
+    implementation 'fr.tvbarthel.blurdialogfragment:lib:2.2.0'
+
+    //BlurView
+    implementation 'com.eightbitlab:supportrenderscriptblur:1.0.2'
+
+    //JodaTime
+    implementation 'joda-time:joda-time:2.10.3'
+
+    implementation 'com.github.mirrajabi:view-effects:e355a1bac4'
+
+    //Exoplayer
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.10.4'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.10.4'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.10.4'
+
+    //Exomedia
+    implementation 'com.devbrackets.android:exomedia:4.3.0'
+
+    //Dexter
+    implementation 'com.karumi:dexter:4.2.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    //FFmpegMediaMetadataRetriever
+    implementation 'com.github.wseemann:FFmpegMediaMetadataRetriever:1.0.14'
+
+    implementation "org.permissionsdispatcher:permissionsdispatcher:4.5.0"
+    annotationProcessor "org.permissionsdispatcher:permissionsdispatcher-processor:4.5.0"
+
+    //AHBottomNavigation
+    implementation 'com.aurelhubert:ahbottomnavigation:2.3.4'
+
+    //Merlin aims to simplify network monitoring
+    implementation 'com.novoda:merlin:1.2.0'
+
+    //SmartTabLayout
+    implementation 'com.ogaclejapan.smarttablayout:library:2.0.0@aar'
+
+    //Optional: see how to use the utility.
+    implementation 'com.ogaclejapan.smarttablayout:utils-v4:2.0.0@aar'
+
+    implementation 'jp.wasabeef:glide-transformations:4.1.0'
+    // If you want to use the GPU Filters
+    implementation 'jp.co.cyberagent.android:gpuimage:2.0.4'
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+
+    implementation 'com.ogaclejapan.smarttablayout:library:2.0.0@aar'
+
+    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+    implementation 'com.crashlytics.sdk.android:crashlytics-ndk:2.1.1'
+
+}
+
+crashlytics {
+    enableNdk true
+    androidNdkOut 'src/main/obj'
+    androidNdkLibsOut 'src/main/libs'
+}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="com.debarunlahiri.burnab.messenger">
+
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:exported="true"
+        android:icon="@mipmap/burnab_messenger_rounded_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/burnab_messenger_circular_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Utils.FollowingActivity"></activity>
+        <activity android:name=".Group.GroupMembersActivtiy" />
+        <activity android:name=".Notifications.Inbox.NotificationsActivity" />
+        <activity android:name=".Settings.SettingsChnageEmailAddressActivity" />
+        <activity android:name=".Settings.SettingsEditUserDetailsActivity" />
+        <activity android:name=".Settings.SettingsChangeUsernameActivity" />
+        <activity android:name=".Settings.SettingsChangeProfilePictureActivity" />
+        <activity android:name=".Settings.PrivacySettingsActivity" />
+        <activity android:name=".Settings.GeneralSettingsActivity" />
+        <activity android:name=".Settings.SettingsActivity" />
+        <activity android:name=".VerificationCheckActivity" />
+        <activity android:name=".SetupUser.SetupFinalActivity" />
+        <activity android:name=".SetupUser.SetupUser3Activity" />
+        <activity android:name=".SetupUser.SetupUser2Activity" />
+        <activity android:name=".SetupUser.SetupUser1Activity" />
+        <activity android:name=".Settings.ChnageBackgroundActivity" />
+        <activity
+            android:name=".OverallProfileActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".Stories.StoryLikeCommentActivity" />
+        <activity android:name=".Stories.StoryUserProfileViewerActivity" />
+        <activity android:name=".Stories.StoriesUserProfileActivity" />
+        <activity android:name=".Stories.StoriesActivity" />
+        <activity android:name=".AddStoryActivity" />
+        <activity android:name=".Group.GroupSearchActivity" />
+        <activity
+            android:name=".Group.GroupChatActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Group.GroupActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".Group.CreateGroupFinalActivity" />
+        <activity android:name=".Group.GroupUserProfileActivity" />
+        <activity android:name=".Group.CreateGroupImageActivity" />
+        <activity android:name=".StartActivity" />
+        <activity android:name=".Group.CreateGroupActivity" />
+        <activity android:name=".Search.SearchActivity" />
+        <activity
+            android:name=".ProfileActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".Chat.ChatActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name=".Settings.AboutActivity" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="a19ffe9062732e48f2e6f5221ef28d256bf9e786" />
+    </application>
+
+</manifest>

@@ -1,5 +1,11 @@
 # BurnabMessenger
-So, I have made a social network app which you connect with people and chat with them.
+So, I have made a social network app which you can do various things: -
+
+<ul>
+  <li>One-on-one Conversation</li>
+  <li>Create Groups where you can chat, post your thoughts</li>
+  <li>User Stories</li>
+</ul>
 
 <h2>Screenshots: -</h2>
 <p float="left">

@@ -30,3 +30,6 @@ So, I have made a social network app which you can do various things: -
 
 <h2>Try app</h2>
 <a href='https://play.google.com/store/apps/details?id=com.debarunlahiri.burnab.messenger&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' width="180"/></a>
+
+<h2>Other Burnab videos</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LCj7ZacP3CQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
